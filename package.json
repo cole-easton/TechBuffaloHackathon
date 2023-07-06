@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "graphjs": "^0.0.4"
+    "chart.js": "^4.3.0"
   }
 }

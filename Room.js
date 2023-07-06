@@ -1,4 +1,4 @@
-export class Room {
+export default class Room {
 
     /**
      * A room in the Buffalo Museum of Science that tracks visitation data
@@ -12,13 +12,14 @@ export class Room {
         this._elapsedMillisecs = 0;
         this.pollingFrequency = pollingFrequency || 1000; 
         this.data = [];
+        this._update();
     }
 
     _update() {
         this._personMillisecs += this.currentGuests*this.pollingFrequency;
         this._elapsedMillisecs += this.pollingFrequency;
-        this.push(this._currentGuests);
-        requestAnimationFrame(update, this.pollingFrequency);
+        this.data.push(this.currentGuests);
+        requestAnimationFrame(this._update.bind(this), this.pollingFrequency);
     }
 
     registerEntrance() {
@@ -28,6 +29,7 @@ export class Room {
 
     registerExit() {
         this.currentGuests--;
+        console.log(this.currentGuests);
     }
 
     getAverageDuration() {
@@ -35,6 +37,7 @@ export class Room {
     }
 
     getTimeSeriesData() {
+        console.log(this.data);
         return this.data;
     }
 
