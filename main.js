@@ -7,6 +7,7 @@ Chart.defaults.color = "#00ace0";
 const sampleRoom = new Room("Sample Room", 5000);
 
 document.querySelector("#enter").onclick = _ => sampleRoom.registerEntrance();
+//document.querySelector("#enter").onclick = _ => updateGraph(sampleRoom.getTimeSeriesData());
 document.querySelector("#exit").onclick = _ => sampleRoom.registerExit();
 document.querySelector("#update").onclick = _ => updateGraph(sampleRoom.getTimeSeriesData());
 
