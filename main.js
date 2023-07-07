@@ -1,7 +1,10 @@
 import Room from "./Room.js";
 import 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js'
 
-const sampleRoom = new Room("Sample Room", 500);
+Chart.defaults.backgroundColor = "white";
+Chart.defaults.color = "#00ace0";
+
+const sampleRoom = new Room("Sample Room", 5000);
 
 document.querySelector("#enter").onclick = _ => sampleRoom.registerEntrance();
 document.querySelector("#exit").onclick = _ => sampleRoom.registerExit();
@@ -18,7 +21,9 @@ function updateGraph(data) {
         data: {
             datasets: [{
                 label: 'First dataset',
-                data: data
+                data: data,
+                borderColor: "#00ace0",
+                backgroundColor: "rgba(255, 255, 255, 0.4)"
             }],
             labels: data.map((_,i)=>i)
         },

@@ -1,3 +1,29 @@
+body {
+    background-color: #172e47;
+}
+
+button {
+    background-color: #00ace0;
+    border-radius: 2px;
+    padding: 1em;
+    color: white;
+    border: none;
+    margin: 1em;
+}
+
+button:hover {
+    filter: brightness(120%);
+    cursor: pointer;
+}
+
+button:active {
+    filter: brightness(90%);
+}
+
 #chart {
-    width: 640px;
+    max-width: 640px;
+    background-color: white;
+    padding: 1em;
+    border-radius: 2px;
+    margin: 1em;
 }
