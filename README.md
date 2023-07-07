@@ -28,4 +28,8 @@ The program displays room data visually, showing the average visit duration and 
 
 The system also helps ensure guest safety in event of an evacuation emergency, as it helps keep track of anyone remaining inside the building, and can identify which rooms are occupied in case of emergency.
 
+---
+
+## Viability
+
 This project aims to be the most viable solution for the available resources at the museum's disposal. The sensors are proven hardware that can be sourced from a number of different companies, and require only initial investment in purchase and installation. They do not disrupt the standard guest experience at all and don't require any changes to museum standard operations. The data collected is anonymous, there are no distinguishing datapoints between different guests, as the system only tracks guests in terms of entrants and exits, without individually tracking people. This keeps the solution both safe and private, protecting the security and privacy of the museum and its visitors.
