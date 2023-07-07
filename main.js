@@ -4,6 +4,7 @@ import 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.j
 const sampleRoom = new Room("Sample Room", 500);
 
 document.querySelector("#enter").onclick = _ => sampleRoom.registerEntrance();
+//document.querySelector("#enter").onclick = _ => updateGraph(sampleRoom.getTimeSeriesData());
 document.querySelector("#exit").onclick = _ => sampleRoom.registerExit();
 document.querySelector("#update").onclick = _ => updateGraph(sampleRoom.getTimeSeriesData());
 
