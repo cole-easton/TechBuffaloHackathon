@@ -1,4 +1,4 @@
-#Museum Footfall Tracker
+##Museum Footfall Tracker
 
 Our overall objective was to provide a viable and cost effective solution to the issue of tracking visitor footfall through the Buffalo Museum of Science.
 
