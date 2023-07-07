@@ -1,6 +1,8 @@
 body {
     background-color: #172e47;
     font-family: sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
 button {
@@ -10,6 +12,47 @@ button {
     color: white;
     border: none;
     margin: 1em;
+}
+
+header {
+    margin: 0;
+    background-color: white;
+    color: #00ace0;
+    height: 100px;
+    padding-left: 1em;
+}
+
+header>img {
+    margin-right: 40px;
+}
+
+header>a {
+    float: right;
+    height: 100%;
+    background-color: #00ace0;
+    color: white;
+    height: 100px;
+    line-height: 100px;
+    text-decoration: none;
+    padding: 0 1em;
+    font-size: large;
+    font-weight: bold;
+}
+
+header>a:hover {
+    filter: brightness(120%);
+    cursor: pointer;
+}
+
+header>a:active {
+    filter: brightness(90%);
+}
+
+header>h1 {
+    margin: 0;
+    display: inline-block;
+    height: 100px;
+    line-height: 100px;
 }
 
 button:hover {
