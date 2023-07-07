@@ -8,6 +8,7 @@ const sampleRoom = new Room("Sample Room", 500);
 
 document.querySelector("#enter").onclick = _ => sampleRoom.registerEntrance();
 document.querySelector("#exit").onclick = _ => sampleRoom.registerExit();
+const avgDurationSpan = document.querySelector("#avg-duration");
 
 const canvas = document.querySelector("#chart");
 const ctx = canvas.getContext("2d");
@@ -16,7 +17,9 @@ const ctx = canvas.getContext("2d");
 setInterval(() => {
     const data = sampleRoom.getTimeSeriesData();
     updateGraph(data);
-  }, 1000);
+    const avgDuration = sampleRoom.getAverageDuration();
+    avgDurationSpan.innerHTML = avgDuration?`${(avgDuration/1000).toFixed(2)}&nbsp;s`:"N/A";
+}, 500);
 
 const chart = new Chart(canvas, {
     type: 'line',
@@ -40,10 +43,10 @@ const chart = new Chart(canvas, {
 });
 
 function updateGraph(data) {
-    console.log( chart.data.datasets[0].data);
+    console.log(chart.data.datasets[0].data);
     const currentLength = chart.data.datasets[0].data.length;
-    chart.data.datasets[0].data.push(...data.filter((_,i)=>i>=currentLength));
-    chart.data.labels = data.map((_,i)=>i);
+    chart.data.datasets[0].data.push(...data.filter((_, i) => i >= currentLength));
+    chart.data.labels = data.map((_, i) => i);
     chart.update();
     console.log("hohoho");
 }
