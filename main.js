@@ -9,6 +9,7 @@ const sampleRoom = new Room("Sample Room", 500);
 document.querySelector("#enter").onclick = _ => sampleRoom.registerEntrance();
 document.querySelector("#exit").onclick = _ => sampleRoom.registerExit();
 const avgDurationSpan = document.querySelector("#avg-duration");
+const totalVisitsSpan = document.querySelector("#total-visits");
 
 const canvas = document.querySelector("#chart");
 const ctx = canvas.getContext("2d");
@@ -19,6 +20,7 @@ setInterval(() => {
     updateGraph(data);
     const avgDuration = sampleRoom.getAverageDuration();
     avgDurationSpan.innerHTML = avgDuration?`${(avgDuration/1000).toFixed(2)}&nbsp;s`:"N/A";
+    totalVisitsSpan.textContent = sampleRoom.totalVisits;
 }, 500);
 
 const chart = new Chart(canvas, {

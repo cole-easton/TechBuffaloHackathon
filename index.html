@@ -13,18 +13,25 @@
 
 <body>
     <header>
-        <img width="50" alt="Buffalo Museum of Science" src="https://www.sciencebuff.org/wp-content/uploads/2018/06/buffalo-museum-regular.png">
+        <img width="50" alt="Buffalo Museum of Science"
+            src="https://www.sciencebuff.org/wp-content/uploads/2018/06/buffalo-museum-regular.png">
         <h1>Buffalo Museum of Science | Visitor Dashboard</h1>
-        <a href = "./index2.html">Multiple Rooms</a>
+        <a href="./index2.html">Multiple Rooms</a>
     </header>
-    <canvas id="chart" width="640" height="480">
-    </canvas> <br>
-    <button id="enter">Register Entrance</button>
-    <button id="exit">Register Exit</button>
-    <div class="widget">
-        Average Visit Duration: <span id="avg-duration"></span>
+    <div class="flexbox">
+        <canvas id="chart" width="640" height="480">
+        </canvas>
+        <div id="controls">
+            <button id="enter">Register Entrance</button>
+            <button id="exit">Register Exit</button> <br>
+            <div class="widget">
+                Average Visit Duration: <span id="avg-duration"></span>
+            </div>
+            <div class="widget">
+                Total Visits: <span id="total-visits"></span>
+            </div>
+        </div>
     </div>
-
 </body>
 
 </html>

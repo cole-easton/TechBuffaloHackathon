@@ -70,6 +70,7 @@ button:active {
     padding: 1em;
     border-radius: 2px;
     margin: 1em;
+    display: inline-block;
 }
 
 .widget {
@@ -79,8 +80,18 @@ button:active {
     font-size: large;
     font-weight: bold;
     padding: 1em;
-    width: 144px;
-    height: 144px;
+    width: 180px;
+    height: 180px;
+    box-sizing: border-box;
     margin: 1em;
     display: inline-block;
+}
+
+#controls {
+    width: 300px;
+    display: inline-block;
+}
+
+.flexbox {
+    display: flex;
 }
