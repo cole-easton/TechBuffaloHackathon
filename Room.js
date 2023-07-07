@@ -12,14 +12,13 @@ export default class Room {
         this._elapsedMillisecs = 0;
         this.pollingFrequency = pollingFrequency || 1000; 
         this.data = [];
-        this._update();
+        setInterval(this._update.bind(this), this.pollingFrequency);
     }
 
     _update() {
         this._personMillisecs += this.currentGuests*this.pollingFrequency;
         this._elapsedMillisecs += this.pollingFrequency;
         this.data.push(this.currentGuests);
-        requestAnimationFrame(this._update.bind(this), this.pollingFrequency);
     }
 
     registerEntrance() {
