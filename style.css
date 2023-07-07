@@ -1,6 +1,8 @@
 body {
     background-color: #172e47;
     font-family: sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
 button {
@@ -10,6 +12,22 @@ button {
     color: white;
     border: none;
     margin: 1em;
+}
+
+header {
+    margin: 0;
+    background-color: white;
+    color: #00ace0;
+    padding: 2em;
+}
+
+header>img {
+    margin-right: 40px;
+}
+
+h1 {
+    margin: 0;
+    display: inline-block;
 }
 
 button:hover {
