@@ -1,4 +1,4 @@
-#H1 Museum Footfall Tracker
+#Museum Footfall Tracker
 
 Our overall objective was to provide a viable and cost effective solution to the issue of tracking visitor footfall through the Buffalo Museum of Science.
 
@@ -11,7 +11,7 @@ Specifically we aimed to:
 
 ---
 
-#H2 Our Solution
+##Our Solution
 
 Our solution utilizes people tracker sensors at the doorways of each exhibit room, in conjuction with a software app to display and analyze the collected data. These sensors register when guests enter and exit the room, and are able to keep track of the total occupancy of a room at any given time, but do not directly track individual guests inside. We deliberately chose to avoid tracking guests as individuals, as it poses both a significant logistical and privacy concern for the museum. As such, our system relies on tracking guests as representatives of a population. The sensors do not register any difference between individual guests, only recoring that a person has entered or exited the room. Our data reflects the "average guest" during the given time interval, minimizing the impact of outliers on our overall results. 
 
