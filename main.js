@@ -4,39 +4,47 @@ import 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.j
 Chart.defaults.backgroundColor = "white";
 Chart.defaults.color = "#00ace0";
 
-const sampleRoom = new Room("Sample Room", 5000);
+const sampleRoom = new Room("Sample Room", 500);
 
 document.querySelector("#enter").onclick = _ => sampleRoom.registerEntrance();
-//document.querySelector("#enter").onclick = _ => updateGraph(sampleRoom.getTimeSeriesData());
 document.querySelector("#exit").onclick = _ => sampleRoom.registerExit();
-document.querySelector("#update").onclick = _ => updateGraph(sampleRoom.getTimeSeriesData());
-
 
 const canvas = document.querySelector("#chart");
 const ctx = canvas.getContext("2d");
 
-function updateGraph(data) {
-    console.log(data);
-    let chart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            datasets: [{
-                label: 'First dataset',
-                data: data,
-                borderColor: "#00ace0",
-                backgroundColor: "rgba(255, 255, 255, 0.4)"
-            }],
-            labels: data.map((_,i)=>i)
-        },
-        options: {
-            scales: {
-                y: {
-                    suggestedMin: 50,
-                    suggestedMax: 100
-                }
-            }
-        }
-    });
 
+setInterval(() => {
+    const data = sampleRoom.getTimeSeriesData();
+    updateGraph(data);
+  }, 1000);
+
+const chart = new Chart(canvas, {
+    type: 'line',
+    data: {
+        datasets: [{
+            label: 'Visitors',
+            data: [],
+            borderColor: "#00ace0",
+            backgroundColor: "rgba(255, 255, 255, 0.4)"
+        }],
+        labels: []
+    },
+    options: {
+        scales: {
+            y: {
+                suggestedMin: 50,
+                suggestedMax: 100
+            }
+        },
+    }
+});
+
+function updateGraph(data) {
+    console.log( chart.data.datasets[0].data);
+    const currentLength = chart.data.datasets[0].data.length;
+    chart.data.datasets[0].data.push(...data.filter((_,i)=>i>=currentLength));
+    chart.data.labels = data.map((_,i)=>i);
+    chart.update();
+    console.log("hohoho");
 }
 

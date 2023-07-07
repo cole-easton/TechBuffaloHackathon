@@ -16,10 +16,7 @@ document.querySelector("#exit").onclick = () => {
   updateGraph(sampleRoom.getTimeSeriesData());
 };
 
-setInterval(() => {
-    const data = sampleRoom.getTimeSeriesData();
-    updateGraph(data);
-  }, 1000);
+
 
 function updateGraph(data) {
   console.log(data);
