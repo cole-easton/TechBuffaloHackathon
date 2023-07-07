@@ -23,3 +23,7 @@ This data allows us to examine how different exhibit rooms compare across variou
 - How many guests are usually in the room at any given time
 
 We can use these datapoints in conjunction with each other to examine how the different rooms compare to each other over a given day. We can identify if certain rooms have high foot traffic but low average stay time (lots of guests walk through the door, but they don't stay for that long) or vice versa (not as many guests enter, but the ones that do are staying for longer).
+
+The program displays room data visually, showing the average visit duration and total visits for each room over a given time interval. It allows both for live tracking of data and for analysis of set intervals. This allows for more targeted analysis such as only viewing data for a given time window. For example, viewing the visitor data during the time of a school field trip but not during the rest of the day to see how the data compares to standard operations, and if the popularity of rooms is different than usual or expected.
+
+The system also helps ensure guest safety in event of an evacuation emergency, as it helps keep track of anyone remaining inside the building, and can identify which rooms are occupied in case of emergency.
