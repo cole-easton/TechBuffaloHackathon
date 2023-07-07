@@ -6,7 +6,7 @@ Chart.defaults.color = "#00ace0";
 
 const sampleRoom = new Room("Sample Room", 1000);
 
-const canvas = document.querySelector("#chart");
+const canvas = document.querySelector(".chart");
 let chart;
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));

@@ -11,7 +11,7 @@ document.querySelector("#exit").onclick = _ => sampleRoom.registerExit();
 const avgDurationSpan = document.querySelector("#avg-duration");
 const totalVisitsSpan = document.querySelector("#total-visits");
 
-const canvas = document.querySelector("#chart");
+const canvas = document.querySelector(".chart");
 
 setInterval(() => {
     const data = sampleRoom.getTimeSeriesData();
