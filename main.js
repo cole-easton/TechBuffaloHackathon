@@ -12,8 +12,6 @@ const avgDurationSpan = document.querySelector("#avg-duration");
 const totalVisitsSpan = document.querySelector("#total-visits");
 
 const canvas = document.querySelector("#chart");
-const ctx = canvas.getContext("2d");
-
 
 setInterval(() => {
     const data = sampleRoom.getTimeSeriesData();

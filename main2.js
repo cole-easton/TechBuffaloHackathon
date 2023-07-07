@@ -7,7 +7,6 @@ Chart.defaults.color = "#00ace0";
 const sampleRoom = new Room("Sample Room", 1000);
 
 const canvas = document.querySelector("#chart");
-const ctx = canvas.getContext("2d");
 let chart;
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
@@ -17,7 +16,7 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
         updateGraph(data);
         await delay(1000);
     }
-})()
+})();
 
   fetch('./RoomData.json').then(response => response.json()).then(json => {
     console.log(json);
